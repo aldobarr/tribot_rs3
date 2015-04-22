@@ -392,6 +392,8 @@ public class DTMHandler{
 	 * @return The DTM as described for said skill, or null if the skill is not supported or is invalid.
 	 */
 	public static DTM getSkillDTM(Skills.SKILLS skill){
+		if(skill == null)
+			return null;
 		switch(skill){
 			case ATTACK:
 				return getAttackSkillDTM();
