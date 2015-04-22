@@ -1,8 +1,8 @@
 package hades.rs3.magic.gui;
 
+import hades.rs3.lib.CameraHandler;
+import hades.rs3.lib.CameraHandler.Face;
 import hades.rs3.magic.Planker;
-import hades.rs3.tools.CameraHandler;
-import hades.rs3.tools.CameraHandler.Face;
 
 import java.awt.event.WindowListener;
 

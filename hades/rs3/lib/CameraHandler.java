@@ -1,4 +1,4 @@
-package hades.rs3.tools;
+package hades.rs3.lib;
 
 import hades.rs3.filters.BurnerFilter;
 

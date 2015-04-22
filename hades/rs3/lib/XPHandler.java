@@ -1,4 +1,4 @@
-package hades.rs3.tools;
+package hades.rs3.lib;
 
 import java.awt.Dimension;
 import java.awt.Point;

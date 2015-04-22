@@ -1,21 +1,21 @@
 package hades.rs3.magic;
 
+import hades.rs3.lib.BreakHandler;
+import hades.rs3.lib.CameraHandler;
+import hades.rs3.lib.ClickHandler;
+import hades.rs3.lib.DTMHandler;
+import hades.rs3.lib.IdleActionsHandler;
+import hades.rs3.lib.LoginHandler;
+import hades.rs3.lib.NoXPStart;
+import hades.rs3.lib.XPHandler;
+import hades.rs3.lib.CameraHandler.Face;
+import hades.rs3.lib.LoginHandler.LoginState;
 import hades.rs3.magic.gui.PlankerGUI;
 import hades.rs3.HadesScript;
 import hades.rs3.LogType;
 import hades.rs3.LogType.Log;
 import hades.rs3.filters.LogFilterBank;
 import hades.rs3.filters.RuneFilter;
-import hades.rs3.tools.BreakHandler;
-import hades.rs3.tools.CameraHandler;
-import hades.rs3.tools.ClickHandler;
-import hades.rs3.tools.DTMHandler;
-import hades.rs3.tools.IdleActionsHandler;
-import hades.rs3.tools.LoginHandler;
-import hades.rs3.tools.NoXPStart;
-import hades.rs3.tools.XPHandler;
-import hades.rs3.tools.CameraHandler.Face;
-import hades.rs3.tools.LoginHandler.LoginState;
 
 import java.awt.Color;
 import java.awt.Dimension;

@@ -1,7 +1,7 @@
-package hades.rs3.tools;
+package hades.rs3.lib;
 
 import hades.rs3.HadesScript;
-import hades.rs3.tools.LoginHandler.LoginState;
+import hades.rs3.lib.LoginHandler.LoginState;
 
 import org.tribot.api.General;
 import org.tribot.api.input.Mouse;
