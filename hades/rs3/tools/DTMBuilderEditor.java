@@ -49,16 +49,16 @@ public class DTMBuilderEditor extends JFrame{
 		btnExport.setBounds(12, 212, 97, 25);
 		btnExport.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				if(first == null || list == null || list.size() == 0)
+					return;
 				int firstX = first.p.x / scale;
 				int firstY = first.p.y / scale;
 				String out = "DTMPoint point = new DTMPoint(new Color(" + first.c.getRed() + ", " + first.c.getGreen() + ", " + first.c.getBlue() + "), new Tolerance(10, 10, 10));\n";
-				if(list.size() > 0){
-					DTM d = list.get(0);
-					out += "DTMSubPoint points[] = {new DTMSubPoint(new ColourPoint(new Point(" + ((d.p.x / scale) - firstX) + ", " + ((d.p.y / scale) - firstY) + "), new Color(" + d.c.getRed() + ", " + d.c.getGreen() + ", " + d.c.getBlue() + ")), new Tolerance(10, 10, 10), 1)";
-					for(int i = 1; i<list.size(); i++){
-						d = list.get(i);
-						out += ", new DTMSubPoint(new ColourPoint(new Point(" + ((d.p.x / scale) - firstX) + ", " + ((d.p.y / scale) - firstY) + "), new Color(" + d.c.getRed() + ", " + d.c.getGreen() + ", " + d.c.getBlue() + ")), new Tolerance(10, 10, 10), 1)";
-					}
+				DTM d = list.get(0);
+				out += "DTMSubPoint points[] = {new DTMSubPoint(new ColourPoint(new Point(" + ((d.p.x / scale) - firstX) + ", " + ((d.p.y / scale) - firstY) + "), new Color(" + d.c.getRed() + ", " + d.c.getGreen() + ", " + d.c.getBlue() + ")), new Tolerance(10, 10, 10), 1)";
+				for(int i = 1; i<list.size(); i++){
+					d = list.get(i);
+					out += ", new DTMSubPoint(new ColourPoint(new Point(" + ((d.p.x / scale) - firstX) + ", " + ((d.p.y / scale) - firstY) + "), new Color(" + d.c.getRed() + ", " + d.c.getGreen() + ", " + d.c.getBlue() + ")), new Tolerance(10, 10, 10), 1)";
 				}
 				out += "};";
 				JFrame temp = new JFrame();
@@ -72,7 +72,7 @@ public class DTMBuilderEditor extends JFrame{
 		});
 		contentPane.add(btnExport);
 		
-		JButton btnClear = new JButton("clear");
+		JButton btnClear = new JButton("Clear");
 		btnClear.setBounds(460, 212, 97, 25);
 		btnClear.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
@@ -90,7 +90,7 @@ public class DTMBuilderEditor extends JFrame{
 		scroller.setBounds(12, 13, 545, 186);
 		contentPane.add(scroller);
 		
-		btnAdd = new JButton("add");
+		btnAdd = new JButton("Add");
 		btnAdd.setBounds(351, 212, 97, 25);
 		btnAdd.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){

@@ -6,7 +6,7 @@ import org.tribot.api.General;
 import org.tribot.script.Script;
 import org.tribot.script.ScriptManifest;
 
-@ScriptManifest(authors = { "hadesflames" }, category = "Tools", name = "hades DTM Builder", version = 1.0, description = "Tool to help build DTMs.", gameMode = 2)
+@ScriptManifest(authors = { "hadesflames" }, category = "Tools", name = "hades DTM Builder", version = 1.01, description = "Tool to help build DTMs.", gameMode = 2)
 public class DTMBuilder extends Script{
 	private DTMBuilderGUI gui = null;
 	
